@@ -402,8 +402,8 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
   .texture-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    max-width: 640px;
+    gap: 12px;
+    max-width: 820px;
     margin: 0 auto;
   }
   .texture-card {
@@ -412,7 +412,7 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
     background: var(--card);
     border: 1px solid var(--card-border);
     border-radius: var(--radius-md);
-    padding: 8px;
+    padding: 10px;
     text-align: center;
     transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   }
@@ -432,26 +432,37 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
     font-family: var(--serif);
     font-weight: 700;
     color: var(--cream);
-    font-size: clamp(0.85rem, 3vw, 1.05rem);
-    margin-top: 8px;
+    font-size: clamp(1rem, 3.6vw, 1.25rem);
+    margin-top: 10px;
+  }
+  .texture-card-price {
+    display: block;
+    color: var(--gold);
+    font-weight: 700;
+    font-size: clamp(0.66rem, 2.4vw, 0.82rem);
+    margin-top: 4px;
+    letter-spacing: 0.01em;
   }
   .texture-card-cta {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 4px;
-    font-size: 0.66rem;
+    font-size: 0.64rem;
+    line-height: 1.3;
     color: var(--gold-light);
-    margin-top: 3px;
+    margin-top: 8px;
     text-transform: uppercase;
     letter-spacing: 0.04em;
   }
-  .texture-card-cta .icon { width: 11px; height: 11px; }
+  .texture-card-cta .icon { width: 11px; height: 11px; flex-shrink: 0; }
 
   @media (min-width: 560px) {
-    .texture-grid { gap: 16px; }
-    .texture-card { padding: 12px; }
-    .texture-card-cta { font-size: 0.75rem; }
+    .texture-grid { gap: 22px; }
+    .texture-card { padding: 18px; }
+    .texture-card-name { margin-top: 14px; }
+    .texture-card-price { font-size: 0.9rem; margin-top: 6px; }
+    .texture-card-cta { font-size: 0.8rem; margin-top: 12px; }
   }
 
   /* ============ Antes e depois ============ */
@@ -522,20 +533,6 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
   .benefit-icon .icon { width: 26px; height: 26px; }
   .benefit-card h3 { font-size: 1.15rem; color: var(--gold-light); margin-bottom: 8px; }
   .benefit-card p { color: var(--text-muted); font-size: 0.92rem; }
-
-  .promise-banner {
-    max-width: 720px;
-    margin: 0 auto 28px;
-    text-align: center;
-    padding: 20px 24px;
-    border-radius: var(--radius-lg);
-    background: linear-gradient(135deg, rgba(201,162,75,0.12), rgba(201,162,75,0.02));
-    border: 1px solid var(--card-border);
-  }
-  .promise-banner p { font-family: var(--serif); font-size: clamp(1.05rem, 2.6vw, 1.35rem); color: var(--gold-light); }
-
-  .method-brazil { max-width: 720px; margin: 0 auto; text-align: center; color: var(--text-muted); font-size: 0.95rem; }
-  .method-brazil strong { color: var(--cream); }
 
   /* ============ Barra de confiança ============ */
   .trust-bar {
@@ -917,7 +914,7 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
   <div class="container hero-inner">
     <p class="hero-brand"><strong>Espaço Naiara Costa</strong>, Beleza e Bem Estar</p>
     <h1 class="hero-title">Mega Hair em Camaçari: <span class="accent">o Cabelo dos Sonhos Tem Endereço</span></h1>
-    <p class="hero-subtitle">Alongamento com o método Ultra Fino Slim de Fita Adesiva, cabelo 100% brasileiro e resultado leve, confortável e natural. Atendimento em Camaçari, com horário marcado.</p>
+    <p class="hero-subtitle">Alongamento com o método Ultra Fino Slim de Fita Adesiva, cabelo 100% brasileiro com resultado leve, confortável e natural. Atendimento em Camaçari, com horário marcado.</p>
 
     <p class="hero-pick-label">Escolha a textura do seu cabelo e fale agora no WhatsApp</p>
 
@@ -926,19 +923,22 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
       <a href="https://wa.me/5571992376959?text=Oi%21%20Vim%20pelo%20an%C3%BAncio%20e%20tenho%20interesse%20no%20mega%20hair%20Liso" class="texture-card wa-link" data-wa-msg="Oi! Vim pelo anúncio e tenho interesse no mega hair Liso" aria-label="Tenho interesse no mega hair Liso, falar no WhatsApp">
         <img src="CABELO%20LISO%20NAIARA.jfif" alt="Mega hair liso" class="texture-card-photo">
         <span class="texture-card-name">Liso</span>
-        <span class="texture-card-cta">Quero esse <svg class="icon"><use href="#icon-arrow"></use></svg></span>
+        <span class="texture-card-price">A partir de R$ 1.900 · 55cm</span>
+        <span class="texture-card-cta">Ver as Opções com a Atendente <svg class="icon"><use href="#icon-arrow"></use></svg></span>
       </a>
       <!-- Card 2: Ondulado -->
       <a href="https://wa.me/5571992376959?text=Oi%21%20Vim%20pelo%20an%C3%BAncio%20e%20tenho%20interesse%20no%20mega%20hair%20Ondulado" class="texture-card wa-link" data-wa-msg="Oi! Vim pelo anúncio e tenho interesse no mega hair Ondulado" aria-label="Tenho interesse no mega hair Ondulado, falar no WhatsApp">
         <img src="CABELO%20ONDULADO%20SITE.jpeg" alt="Mega hair ondulado" class="texture-card-photo">
         <span class="texture-card-name">Ondulado</span>
-        <span class="texture-card-cta">Quero esse <svg class="icon"><use href="#icon-arrow"></use></svg></span>
+        <span class="texture-card-price">A partir de R$ 1.900 · 55cm</span>
+        <span class="texture-card-cta">Ver as Opções com a Atendente <svg class="icon"><use href="#icon-arrow"></use></svg></span>
       </a>
       <!-- Card 3: Cacheado -->
       <a href="https://wa.me/5571992376959?text=Oi%21%20Vim%20pelo%20an%C3%BAncio%20e%20tenho%20interesse%20no%20mega%20hair%20Cacheado" class="texture-card wa-link" data-wa-msg="Oi! Vim pelo anúncio e tenho interesse no mega hair Cacheado" aria-label="Tenho interesse no mega hair Cacheado, falar no WhatsApp">
         <img src="CABELO%20CACHEADO%20SITE.jpg" alt="Mega hair cacheado" class="texture-card-photo">
         <span class="texture-card-name">Cacheado</span>
-        <span class="texture-card-cta">Quero esse <svg class="icon"><use href="#icon-arrow"></use></svg></span>
+        <span class="texture-card-price">A partir de R$ 1.900 · 55cm</span>
+        <span class="texture-card-cta">Ver as Opções com a Atendente <svg class="icon"><use href="#icon-arrow"></use></svg></span>
       </a>
     </div>
   </div>
@@ -958,9 +958,6 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
         <div class="ba-gallery reveal-group">
           <div class="ba-pair reveal">
             <img src="ANTES%20E%20DEPOIS%201%20LP.png" alt="Antes e depois, transformação 1, mega hair 100% brasileiro" loading="lazy">
-          </div>
-          <div class="ba-pair reveal">
-            <img src="ANTES%20E%20DEPOIS%202%20LP.png" alt="Antes e depois, transformação 2, mega hair 100% brasileiro" loading="lazy">
           </div>
           <div class="ba-pair reveal">
             <img src="ANTES%20E%20DEPOIS%203%20LP.png" alt="Antes e depois, transformação 3, mega hair 100% brasileiro" loading="lazy">
@@ -1008,12 +1005,6 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
         <p>Distribuição leve do fio, do início ao fim, para um cabelo natural do jeito que deveria ser.</p>
       </div>
     </div>
-
-    <div class="promise-banner reveal">
-      <p>O resultado: leve, confortável e com naturalidade, do primeiro dia até a manutenção.</p>
-    </div>
-
-    <p class="method-brazil reveal"><strong>Cabelo 100% brasileiro.</strong> Trabalhamos apenas com fios 100% brasileiros, reconhecidos pela durabilidade e pelo brilho natural compatível com a textura brasileira. Isso significa mais tempo de uso, menos ressecamento e um resultado que parece ter nascido com você.</p>
   </div>
 </section>
 
@@ -1051,7 +1042,7 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
   <div class="container">
     <div class="offer-1 reveal-group">
       <div class="offer1-content reveal">
-        <span class="offer-badge">Oferta Principal</span>
+        <span class="offer-badge">Promoção Especial</span>
         <h2>Manutenção Fita Adesiva + Selagem Liso Perfeito</h2>
         <p class="offer-desc">Manutenção completa do seu mega hair com fita adesiva, mais Selagem Liso Perfeito, para manter o efeito leve, confortável e natural do método Ultra Fino Slim de Fita Adesiva.</p>
         <p class="offer-price">R$ 399<sup>,99</sup></p>
@@ -1070,7 +1061,7 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
   <div class="container">
     <div class="section-header section-header--left reveal">
       <span class="eyebrow">Programação Semanal</span>
-      <h2>Uma Opção Boa Para Cada Dia</h2>
+      <h2>Um Ritual de Beleza Para Cada Dia</h2>
       <p>Atendimento das 8h às 18h.</p>
     </div>
 
