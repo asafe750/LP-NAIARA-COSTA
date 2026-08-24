@@ -1,6 +1,24 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1018927801091253');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1018927801091253&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mega Hair em Camaçari, Extensão de Cabelo 100% Brasileiro | Espaço Naiara Costa</title>
@@ -32,25 +50,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<!-- ==================== Meta Pixel Code ==================== -->
-<!-- SUBSTITUA "SEU_PIXEL_ID" PELO ID REAL DO PIXEL DO META ANTES DE PUBLICAR -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', 'SEU_PIXEL_ID');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
-/></noscript>
-<!-- ==================== Fim Meta Pixel Code ==================== -->
 
 <!-- ==================== JSON-LD: Dados Estruturados ==================== -->
 <!-- Coordenadas geo estao como placeholder, substitua pela latitude e longitude reais de cada unidade -->
@@ -250,7 +249,6 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
   .section-header { text-align: center; max-width: 640px; margin: 0 auto 40px; position: relative; z-index: 1; }
   .section-header h2 { font-size: clamp(1.6rem, 4vw, 2.3rem); }
   .section-header p { color: var(--text-muted); margin-top: 12px; font-size: 0.98rem; }
-  .section-header--left { text-align: left; margin: 0 0 32px; max-width: 520px; }
 
   section { position: relative; padding: 64px 0; }
   section.section-alt { background: linear-gradient(180deg, var(--graphite), var(--graphite-2)); }
@@ -948,7 +946,7 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
 <section id="antes-depois" class="section-alt">
   <div class="container">
     <div class="ad-layout">
-      <div class="section-header section-header--left reveal">
+      <div class="section-header reveal">
         <span class="eyebrow">Transformações</span>
         <h2>Antes e Depois</h2>
         <p>Veja como o mega hair 100% brasileiro com o método Ultra Fino Slim de Fita Adesiva muda o visual sem pesar e sem aparecer.</p>
@@ -1059,7 +1057,7 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
 <!-- ==================== 6. OFERTA 2, PROGRAMAÇÃO SEMANAL ==================== -->
 <section id="oferta-2">
   <div class="container">
-    <div class="section-header section-header--left reveal">
+    <div class="section-header reveal">
       <span class="eyebrow">Programação Semanal</span>
       <h2>Um Ritual de Beleza Para Cada Dia</h2>
       <p>Atendimento das 8h às 18h.</p>
@@ -1150,7 +1148,7 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
 <section id="faq">
   <div class="container">
     <div class="faq-layout">
-      <div class="section-header section-header--left reveal">
+      <div class="section-header reveal">
         <span class="eyebrow">Dúvidas Frequentes</span>
         <h2>Perguntas Que Toda Cliente Faz</h2>
       </div>
@@ -1184,7 +1182,7 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
 <!-- ==================== 9. LOCALIZAÇÃO ==================== -->
 <section id="localizacao" class="section-alt">
   <div class="container">
-    <div class="section-header section-header--left reveal">
+    <div class="section-header reveal">
       <span class="eyebrow">Onde Nos Encontrar</span>
       <h2>Localização</h2>
     </div>
@@ -1343,10 +1341,11 @@ src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
     if (baseMsg) {
       el.setAttribute("href", buildWaHref(baseMsg));
     }
+    // 5. Dispara o evento padrão Lead do Meta Pixel uma unica vez por clique,
+    // sem bloquear a abertura do link do WhatsApp
     el.addEventListener("click", function () {
-      // 5. Dispara evento padrão do Meta Pixel a cada clique no WhatsApp
       if (typeof fbq === "function") {
-        fbq("track", "Lead");
+        fbq("track", "Lead", { content_name: "Mega Hair" });
       }
     });
   });
